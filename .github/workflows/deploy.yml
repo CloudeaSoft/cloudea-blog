@@ -48,3 +48,10 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+  submit-indexnow:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Submit to IndexNow
+        run: curl -X POST "https://api.bing.com/ping?sitemap=https://blog.cloudea.work/sitemap.xml"  
