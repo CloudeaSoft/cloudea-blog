@@ -23,9 +23,9 @@ info:
 # Docs: https://redefine-docs.ohevan.com/basic/defaults
 defaults:
   # Favicon
-  favicon: /images/avatar.jpg
+  favicon: /images/favicon-32.ico
   # Site logo
-  logo: /images/avatar.jpg
+  logo: /images/favicon-96.ico
   # Site avatar
   avatar: /images/avatar.jpg
 # IMAGE CONFIGURATION <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< end
