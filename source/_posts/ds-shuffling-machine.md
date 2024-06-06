@@ -21,7 +21,8 @@ For each test case, print the shuffling results in one line. All the cards are s
 **Sample Output:**
 S7 C11 C10 C12 S1 H7 H8 H9 D8 D9 S11 S12 S13 D10 D11 D12 S3 S4 S6 S10 H1 H2 C13 D2 D3 D4 H6 H3 D13 J1 J2 C1 C2 C3 C4 D1 S5 H5 H11 H12 C6 C7 C8 C9 S2 S8 S9 H10 D5 D6 D7 H4 H13 C5 |
 
-##首先理解一下题目：
+## 首先理解一下题目：
+
 我们有一副有序的扑克牌（int[54]），需要拿到一组指令集（int[54]），和指令集执行次数（int），然后按照指令集交换卡牌的位置，最后输出卡牌的位置 ###输入：
 1 个整数，1 个长度为 54 的数组 ###过程：
 
@@ -29,14 +30,14 @@ S7 C11 C10 C12 S1 H7 H8 H9 D8 D9 S11 S12 S13 D10 D11 D12 S3 S4 S6 S10 H1 H2 C13 
 2. 然后进行若干次循环，交换卡牌的位置 ###输出：
    打印出卡牌的“花色”和“数字”
 
-###额外想法：
+### 额外想法：
 
 - 把卡牌抽象成 1-54，最后用字典来输出。这样可以简化卡牌的生成，专心实现卡牌交换
 - 把卡牌数 54 抽象到一个固定变量 MAXSIZE，增加复用的可能
 
-###抽象实现：
+### 抽象实现：
 
-```
+```cpp
 #include <stdio.h>
 const int MAXSIZE = 54;
 
@@ -74,12 +75,14 @@ int main()
 }
 ```
 
-##然后是过程的具体实现 ###读取指令：for 循环
+## 然后是过程的具体实现
+
+### 读取指令：for 循环
 
 <details>
 <summary>点击查看代码</summary>
 
-```
+```cpp
 int initOrders(int orders[])
 {
     for (int i = 0; i < MAXSIZE; i++)
@@ -97,12 +100,12 @@ int initOrders(int orders[])
 
 </details>
 
-###初始化卡牌: for 循环
+### 初始化卡牌: for 循环
 
 <details>
 <summary>点击查看代码</summary>
 
-```
+```cpp
 int initCards(int cards[])
 {
     for (int i = 0; i < MAXSIZE; i++)
@@ -120,15 +123,14 @@ int initCards(int cards[])
 
 </details>
 
-###交换卡牌：
+### 交换卡牌：
 
 - 使用了一个中介的数组，保存卡牌按照指令修改后的位置。然后用 for 循环依次扫描填入后，再将临时数组的内容放回卡牌数组中。复杂度 O(2N)=>O(N)
 
 <details>
 <summary>点击查看代码</summary>
 
-```
-
+```cpp
 int exchangeCards(int cards[], int orders[], int repeatCount)
 {
     int temps[MAXSIZE] = {0};
@@ -149,14 +151,14 @@ int exchangeCards(int cards[], int orders[], int repeatCount)
 
 </details>
 
-###输出字典：
+### 输出字典：
 
 - 每 13 张更换一次色号——首字母，大小王各 1 张（J1，J2）。用 If 判断简单实现，switch 也行。
 
 <details>
 <summary>点击查看代码</summary>
 
-```
+```cpp
 void outputWithDictionary(int output)
 {
     if (output <= 13)
@@ -184,9 +186,12 @@ void outputWithDictionary(int output)
 
 </details>
 
-#完整代码
+## 完整代码
 
-```
+<details>
+<summary>点击查看代码</summary>
+
+```cpp
 #include <stdio.h>
 const int MAXSIZE = 54;
 
@@ -292,3 +297,5 @@ void outputWithDictionary(int output)
     }
 }
 ```
+
+</details>
