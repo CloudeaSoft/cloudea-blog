@@ -6,7 +6,7 @@ tags:
   - C#
   - Terraria
   - 游戏开发
-cover: "/images/cover/tmodloader.jpg"
+cover: "/images/covers/tmodloader.jpg"
 ---
 
 最近加入了 Terraria 的[流光无际 Mod](https://github.com/Solaestas/Everglow)制作组，参与模组的代码开发。之后会记录一些开发过程中遇到的问题与解决方法。

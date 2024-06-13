@@ -11,7 +11,7 @@ tags:
 
 <div align="center">
 
-![](/images/etc/ds-six-degrees-of-separation.jpg)
+![](/images/illustrations/ds-six-degrees-of-separation/1.jpg)
 图 1 六度空间示意图
 <br>
 
