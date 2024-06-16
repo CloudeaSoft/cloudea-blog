@@ -1,5 +1,5 @@
 ---
-title: Nuxt3安装Pinia与pinia-plugin-persistedstate
+title: Nuxt3安装pinia与pinia-plugin-persistedstate
 date: 2024-06-05 22:26:28
 categories: 技术
 tags:
